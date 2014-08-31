@@ -3,7 +3,7 @@ class fdesetup(
 ) {
   exec { 'enable-fde':
     command => 'fdesetup enable -defer $tmpfile -forceatlogin 0 -norecoverykey',
-    path => '/usr/bin',
+    path => '/usr/bin:/bin',
     onlyif => [
       "test '${::root_encrypted}' == 'no'",
       'test -z "$(fdesetup status | grep Deferred)"'
