@@ -1,3 +1,5 @@
+**Inactive Project:** OSX does this by default during install, as of Yosemite
+
 puppet-fdesetup
 ===========
 
